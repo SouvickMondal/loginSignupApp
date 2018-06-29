@@ -1,0 +1,10 @@
+<div>
+  <form [formGroup]="myForm">
+    <input type="text" formControlName="name" placeholder="Enter name" [value]="userData.name" [(ngModel)]="userData.name" name="user_name"/>
+    <input type="text" formControlName="email" placeholder="Enter email" [value]="userData.email" [(ngModel)]="userData.email" name="user_email"/>
+    <input type="number" formControlName="age" placeholder="Enter age" [value]="userData.age" [(ngModel)]="userData.age" name="user_age"/>
+    <input type="password" formControlName="password" placeholder="Enter password" [value]="userData.password" [(ngModel)]="userData.password" name="user_password"/>
+    <input type="password" formControlName="confirm_password" placeholder="Enter re-password" [value]="userData.confirmPassword" [(ngModel)]="userData.confirmPassword" name="user_confirmPassword"/>
+  </form>
+  <button type="submit" [disabled]="!myForm.valid" (click)="saveData()">Save</button>
+</div>
